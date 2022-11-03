@@ -5,7 +5,7 @@ export default class login extends Component {
   render() {
     return (
       <div data-testid="page-login">
-        <h1>login</h1>
+        <input type="text" testid="login-name-input" />
       </div>
     );
   }
