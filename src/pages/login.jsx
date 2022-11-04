@@ -60,7 +60,8 @@ export default class login extends Component {
                 >
                   Entrar
                 </button>
-              </form>)
+              </form>
+            )
         }
       </div>
     );
