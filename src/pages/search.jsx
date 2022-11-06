@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Album from '../components/Album';
+import AlbumCard from '../components/AlbumCard';
 import Header from '../components/Header';
 import Loading from '../components/Loading';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
@@ -76,7 +76,7 @@ export default class search extends Component {
           > 0
             ? (
               <h1>
-                { albums.map((p, index) => (<Album
+                { albums.map((p, index) => (<AlbumCard
                   key={ index }
                   albumImage={ p.artworkUrl100 }
                   albumName={ p.collectionName }

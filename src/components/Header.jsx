@@ -36,7 +36,7 @@ export default class Header extends Component {
         </div>
         <Link to="/search" data-testid="link-to-search">Search</Link>
         <Link to="/favorites" data-testid="link-to-favorites">Favorites</Link>
-        <Link to="/profile" data-testid="link-to-profile">Search</Link>
+        <Link to="/profile" data-testid="link-to-profile">Perfil</Link>
       </header>
     );
   }
