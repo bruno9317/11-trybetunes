@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-export default class MusicCard extends Component {
+export default class FavoriteMusicCard extends Component {
   render() {
     const {
       musicName,
@@ -16,11 +16,11 @@ export default class MusicCard extends Component {
         <audio data-testid="audio-component" src={ previewUrl } controls>
           <track kind="captions" />
         </audio>
-        <label htmlFor="Favorites">
+        <label htmlFor={ trackId }>
           <input
             type="checkbox"
             id={ trackId }
-            name="Favorites"
+            name="favorites"
             data-testid={ `checkbox-music-${trackId}` }
             onClick={ onInputClick }
             defaultChecked={ isChecked }
@@ -32,7 +32,7 @@ export default class MusicCard extends Component {
   }
 }
 
-MusicCard.propTypes = {
+FavoriteMusicCard.propTypes = {
   musicName: PropTypes.string.isRequired,
   previewUrl: PropTypes.string.isRequired,
   trackId: PropTypes.string.isRequired,

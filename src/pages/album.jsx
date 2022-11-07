@@ -21,6 +21,7 @@ export default class album extends Component {
     const { match } = this.props;
     const { params } = match;
     const { id } = params;
+    console.log(match);
     const receba = await getMusics(id);
     this.setState({
       album1: receba,
