@@ -65,12 +65,13 @@ export default class album extends Component {
         <Header />
         { isLoading && <Loading /> }
         <div>
-          <h1 data-testid="artist-name">{nomeDaBanda}</h1>
-          <h2 data-testid="album-name">{ nomeDoAlbum }</h2>
+          <h1 data-testid="album-name">{ nomeDoAlbum }</h1>
+          <h4 data-testid="artist-name">{`by: ${nomeDaBanda}`}</h4>
           { album2.map((p, index) => (<MusicCard
             key={ index }
             musicName={ p.trackName }
             previewUrl={ p.previewUrl }
+            albumImage={ p.artworkUrl100 }
             trackId={ `${p.trackId}` }
             // {  }
             isChecked={ favoritesToLoad.includes(p.trackId) }
