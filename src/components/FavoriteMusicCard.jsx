@@ -9,17 +9,16 @@ export default class FavoriteMusicCard extends Component {
       previewUrl,
       trackId,
       onInputClick,
-      // albumImage,
+      albumImage,
     } = this.props;
     return (
       <div className="musicCard rounded-start rounded-end">
-        {/* <img
+        <img
           src={ albumImage }
           alt={ musicName }
           className="rounded-start"
-          // width="50px"
           height="100%"
-        /> */}
+        />
         <div className="corpoCTitulo">
           <h3>{musicName}</h3>
           <div className="corpoSTitulo">
@@ -48,6 +47,6 @@ FavoriteMusicCard.propTypes = {
   musicName: PropTypes.string.isRequired,
   previewUrl: PropTypes.string.isRequired,
   trackId: PropTypes.string.isRequired,
-  // albumImage: PropTypes.string.isRequired,
+  albumImage: PropTypes.string.isRequired,
   onInputClick: PropTypes.func.isRequired,
 };

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import { createUser } from '../services/userAPI';
 import Loading from '../components/Loading';
+import logo from '../';
 
 export default class login extends Component {
   state = {
@@ -43,23 +44,36 @@ export default class login extends Component {
           isLoading
             ? <Loading />
             : (
-              <form>
-                {isLogged ? <Redirect to="/search" /> : <input
-                  type="text"
-                  placeholder="Nome de Usuario"
-                  name="name"
-                  value={ name }
-                  onChange={ this.handleChange }
-                  data-testid="login-name-input"
-                />}
-                <button
-                  type="button"
-                  disabled={ isButtonDisabled }
-                  onClick={ this.handleLoginClick }
-                  data-testid="login-submit-button"
-                >
-                  Entrar
-                </button>
+              <form className="login-form">
+                <div className="login-content">
+                  <img
+                    src="https://files.fm/thumb_show.php?i=zuak2nj85"
+                    alt="logo"
+                    height="35%"
+                  />
+                  <div>
+                    {isLogged ? <Redirect to="/search" /> : <input
+                      type="text"
+                      placeholder="Nome de Usuario"
+                      name="name"
+                      className="form-control"
+                      value={ name }
+                      onChange={ this.handleChange }
+                      data-testid="login-name-input"
+                    />}
+                  </div>
+                  <div>
+                    <button
+                      type="button"
+                      className="btn btn-primary"
+                      disabled={ isButtonDisabled }
+                      onClick={ this.handleLoginClick }
+                      data-testid="login-submit-button"
+                    >
+                      Entrar
+                    </button>
+                  </div>
+                </div>
               </form>
             )
         }

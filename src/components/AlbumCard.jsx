@@ -6,15 +6,19 @@ export default class AlbumCard extends Component {
   render() {
     const { albumImage, albumName, artistName, collectionId } = this.props;
     return (
-      <div>
-        <img src={ albumImage } alt={ albumName } />
-        <h2>{ albumName }</h2>
-        <h4>{ artistName }</h4>
+      <div className="divLink">
         <Link
           to={ `/album/${collectionId}` }
           data-testid={ `link-to-album-${collectionId}` }
+          className="LinkAlbum"
         >
-          Search
+          <div className="AlbumCard">
+            <img src={ albumImage } alt={ albumName } />
+            <div>
+              <h2>{ albumName }</h2>
+              <h6>{ artistName }</h6>
+            </div>
+          </div>
         </Link>
       </div>
     );

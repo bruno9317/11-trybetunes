@@ -1,0 +1,71 @@
+.AlbumGroup {
+    display: flex;
+    flex-direction:wrap;
+    flex-wrap: wrap;
+    margin-left: 50px;
+}
+
+.divLink {
+    /* border: 3px solid black; */
+    width: 18%;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    height: fit-content;
+}
+
+.AlbumCard {
+    /* background-color: grey; */
+    /* border: 1px solid gray; */
+    color: black;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    background-color: rgb(255,255,255,0.3);
+    border-radius: 6px;
+    /* height: ; */
+    /* width: 300px; */
+    height: 400px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.AlbumCard h2 {
+   display: -webkit-box;
+   -webkit-line-clamp: 2;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   text-align: center;
+}
+
+.AlbumCard h6 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+ }
+
+.AlbumCard div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 3px solid yellow; */
+}
+
+.AlbumCard img {
+    /* border: 3px solid red; */
+    /* width: 78%; */
+    height: 50%;
+    /* width: 50%; */
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+
+.LinkAlbum {
+    text-decoration: none;
+    color: aliceblue;
+    width: 100%;
+}

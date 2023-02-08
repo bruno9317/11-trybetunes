@@ -1,0 +1,32 @@
+.profile-image {
+    border-radius: 50%;
+    width: 19%;
+    margin-bottom: 30px;
+}
+
+.mostra-perfil {
+    /* border: 2px solid black; */
+    width: 100%;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    /* margin-left: 200px ; */
+    /* margin-top: 80px; */
+}
+
+.edit-profile-full {
+    display: flex;
+    /* border: 2px solid black;     */
+    /* margin-left: 50px; */
+    margin-top: 80px;
+    width: 60%;
+    align-items: center;
+    justify-content:space-around;
+}
+.edit-profile-full img {
+    border-radius: 50%;
+    /* height: 20%; */
+    width: 28%;
+}

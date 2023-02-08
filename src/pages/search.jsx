@@ -45,37 +45,45 @@ export default class search extends Component {
     } = this.state;
     return (
       <div data-testid="page-search">
-        <Header />
         {isLoading ? <Loading />
           : (
             <div>
-              <input
-                type="text"
-                placeholder="pesquisar"
-                name="pesquisar"
-                value={ pesquisar }
-                onChange={ this.handleChange }
-                data-testid="search-artist-input"
-              />
-              <button
-                type="button"
-                disabled={ isButtonDisabled }
-                onClick={ this.handleSearchClick }
-                data-testid="search-artist-button"
-              >
-                Pesquisar
-              </button>
+              <Header />
+              <div className="main-div">
+                <div className="input-div">
+                  <input
+                    type="text"
+                    placeholder="pesquisar"
+                    name="pesquisar"
+                    className="form-control"
+                    value={ pesquisar }
+                    onChange={ this.handleChange }
+                    data-testid="search-artist-input"
+                  />
+                </div>
+                <div>
+                  <button
+                    type="button"
+                    className="btn btn-light"
+                    disabled={ isButtonDisabled }
+                    onClick={ this.handleSearchClick }
+                    data-testid="search-artist-button"
+                  >
+                    Pesquisar
+                  </button>
+                </div>
+              </div>
             </div>)}
-        <h3>
+        <h5 className="albums-found">
           {
             `${fraseResultado}`
           }
-        </h3>
+        </h5>
         {
           albums.length
           > 0
             ? (
-              <h1>
+              <div className="AlbumGroup">
                 { albums.map((p, index) => (<AlbumCard
                   key={ index }
                   albumImage={ p.artworkUrl100 }
@@ -83,11 +91,11 @@ export default class search extends Component {
                   artistName={ p.artistName }
                   collectionId={ p.collectionId }
                 />)) }
-              </h1>
+              </div>
             ) : (
-              <h1>
+              <h5 className="not-found">
                 Nenhum álbum foi encontrado
-              </h1>
+              </h5>
             )
         }
       </div>

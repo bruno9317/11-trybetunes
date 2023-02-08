@@ -10,16 +10,9 @@ export default class MusicCard extends Component {
       trackId,
       onInputClick,
       isChecked,
-      albumImage,
     } = this.props;
     return (
       <div className="musicCard rounded-start rounded-end">
-        <img
-          src={ albumImage }
-          alt={ musicName }
-          className="rounded-start"
-          height="100%"
-        />
         <div className="corpoCTitulo">
           <h3 className="card-title">{musicName}</h3>
           <div className="corpoSTitulo">
@@ -48,7 +41,7 @@ MusicCard.propTypes = {
   musicName: PropTypes.string.isRequired,
   previewUrl: PropTypes.string.isRequired,
   trackId: PropTypes.string.isRequired,
-  albumImage: PropTypes.string.isRequired,
+  // albumImage: PropTypes.string.isRequired,
   isChecked: PropTypes.bool.isRequired,
   onInputClick: PropTypes.func.isRequired,
 };

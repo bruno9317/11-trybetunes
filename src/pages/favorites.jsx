@@ -37,14 +37,16 @@ export default class favorites extends Component {
     return (
       <div data-testid="page-favorites">
         <Header />
-        { isLoading ? <Loading /> : listaDeMusicas.map((p, index) => (<FavoriteMusicCard
-          key={ index }
-          musicName={ p.trackName }
-          albumImage={ p.artworkUrl100 }
-          trackId={ `${p.trackId}` }
-          previewUrl={ p.previewUrl }
-          onInputClick={ this.onInputClick }
-        />)) }
+        <div className="testeParaMari">
+          { isLoading ? <Loading /> : listaDeMusicas.map((p, index) => (<FavoriteMusicCard
+            key={ index }
+            musicName={ p.trackName }
+            albumImage={ p.artworkUrl100 }
+            trackId={ `${p.trackId}` }
+            previewUrl={ p.previewUrl }
+            onInputClick={ this.onInputClick }
+          />)) }
+        </div>
       </div>
     );
   }
